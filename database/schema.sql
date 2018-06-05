@@ -10,8 +10,10 @@
 -- 
 -- ---
 
-DROP TABLE IF EXISTS `photos`;
-        
+DROP DATABASE IF EXISTS hero_module;
+CREATE DATABASE hero_module;
+USE hero_module;
+
 CREATE TABLE `photos` (
   `uri` VARCHAR(75) NOT NULL,
   `listing_id` INTEGER NOT NULL,
