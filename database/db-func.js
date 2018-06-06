@@ -12,11 +12,11 @@ db.connect();
 
 db.query = bluebird.promisify(db.query);
 
-const selectImagesByListingId = (listingID) => {
+const selectImageURIsByListingID = (listingID) => {
   const sql = 'SELECT uri FROM photos WHERE listing_id=?';
   return db.query(sql, [listingID]);
 };
 
 module.exports = {
-  selectImagesByListingId,
+  selectImageURIsByListingID,
 };
