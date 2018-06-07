@@ -5,3 +5,5 @@ const Backdrop = (props) => {
     <div> Backdrop Component </div>
   );
 };
+
+export default Backdrop;

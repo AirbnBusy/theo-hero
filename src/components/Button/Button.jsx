@@ -5,3 +5,5 @@ const Button = (props) => {
     <div> Button Component </div>
   );
 };
+
+export default Button;

@@ -5,3 +5,5 @@ const ModalSS = (props) => {
     <div> ModalSS Component </div>
   );
 };
+
+export default ModalSS;

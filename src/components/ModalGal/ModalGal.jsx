@@ -5,3 +5,5 @@ const ModalGal = (props) => {
     <div> ModalGal Component </div>
   );
 };
+
+export default ModalGal;

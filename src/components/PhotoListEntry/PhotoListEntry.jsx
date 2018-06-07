@@ -5,3 +5,5 @@ const PhotoListEntry = (props) => {
     <div> PhotoListEntry Component </div>
   );
 };
+
+export default PhotoListEntry;

@@ -5,3 +5,5 @@ const CurrentPhoto = (props) => {
     <div> CurrentPhoto Component </div>
   );
 };
+
+export default CurrentPhoto;

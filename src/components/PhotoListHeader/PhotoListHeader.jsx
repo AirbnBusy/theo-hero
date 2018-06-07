@@ -5,3 +5,5 @@ const PhotoListHeader = (props) => {
     <div> PhotoListHeader Component </div>
   );
 };
+
+export default PhotoListHeader;
