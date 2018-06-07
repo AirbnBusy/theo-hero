@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import './App.css';
+import Backdrop from '../Backdrop/Backdrop';
+import ModalSS from '../ModalSS/ModalSS';
+import ModalGal from '../ModalGal/ModalGal';
+import Hero from '../Hero/Hero';
 
 class App extends Component {
   constructor(props) {
@@ -11,6 +14,10 @@ class App extends Component {
     return (
       <div>
         <h1> Hello, World! </h1>
+        <Backdrop />
+        <ModalSS />
+        <ModalGal />
+        <Hero />
       </div>
     );
   }

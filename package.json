@@ -10,6 +10,7 @@
   "scripts": {
     "server": "nodemon ./server/server.js",
     "wp": "webpack-dev-server --mode development",
+    "test": "jest --watch",
     "build": "webpack --mode development"
   },
   "dependencies": {
