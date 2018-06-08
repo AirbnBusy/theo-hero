@@ -9,13 +9,24 @@ class App extends Component {
     super(props);
     this.state = {
       testImgSrc: 'https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00020.jpg',
+      galleryModalShow: false,
+      ssModalShow: false,
     };
+    this.toggleSSModalHandler = this.toggleSSModalHandler.bind(this);
+  }
+
+  toggleSSModalHandler() {
+    this.setState({ ssModalShow: !this.state.ssModalShow });
   }
 
   render() {
     return (
       <div>
-        <Backdrop />
+        <Backdrop
+          galleryModalShow={this.state.galleryModalShow}
+          ssModalShow={this.state.ssModalShow}
+          toggleSSModal={this.toggleSSModalHandler}
+        />
         <ModalSS />
         <ModalGal />
         <Hero testImgSrc={this.state.testImgSrc} />
