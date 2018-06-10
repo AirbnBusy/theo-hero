@@ -1,0 +1,25 @@
+.container {
+    z-index: 101;
+    position: fixed;
+    width: 100%;
+}
+
+.content {
+    margin: 0 .5rem;
+}
+
+.controls {
+    color: #FFF;
+}
+
+.close-control {
+    top: 0;
+    right: 0;
+    padding: 1rem 1.75rem .5rem;
+}
+
+.left-control {
+}
+
+.right-control {
+}

@@ -1,0 +1,22 @@
+.button {
+    cursor: pointer !important;
+    display: inline-block !important;
+    position: relative !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    transition-property: background, border-color, color !important;
+    transition-duration: 0.2s !important;
+    transition-timing-function: ease-out !important;
+    width: auto !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    min-width: 51.77708763999664px !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    border-color: transparent !important;
+    color: #484848 !important;
+}

@@ -1,8 +1,12 @@
 import React from 'react';
+import PhotoListEntry from '../PhotoListEntry/PhotoListEntry';
 
 const PhotoList = (props) => {
   return (
-    <div> PhotoList Component </div>
+    <div>
+      <div />
+      <PhotoListEntry />
+    </div>
   );
 };
 
