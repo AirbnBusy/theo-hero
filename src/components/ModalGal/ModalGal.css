@@ -12,10 +12,17 @@
     color: #FFF;
 }
 
-.close-control {
-    top: 0;
-    right: 0;
-    padding: 1rem 1.75rem .5rem;
+.close-control-bar {
+    height: 5.25rem;
+  /*  padding: 1rem 1.75rem .5rem;*/
+}
+
+.close-gallery {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+
 }
 
 .left-control {

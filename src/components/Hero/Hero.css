@@ -8,19 +8,12 @@
 }
 
 .upper-button-box {
-    margin-left: auto;
+    position: absolute;
+    right: 0;
 }
 
 .lower-button-box {
-    margin-right: auto;   
-}
-
-.upper-button-box button {
-    padding: .5rem 1rem;
-    margin: 1.5rem 1.125rem 1.25rem 0;
-}
-
-.lower-button-box button {
-    padding: .5rem 1rem;
-    margin: 1.5rem 1.125rem 1.25rem 1.125rem;
+    position: absolute;
+    top: 474px;
+    left: 18px;
 }

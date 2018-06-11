@@ -15,7 +15,9 @@ class ModalGal extends Component {
   renderModal() {
     return (
       <div className={styles.container}>
-        <div className={[styles['close-control'], styles.controls].join(' ')}>&times;</div>
+        <div className={[styles['close-control-bar'], styles.controls].join(' ')}>
+          <span className={styles['close-gallery']}>&times;</span>
+        </div>
         <CurrentPhoto currentPhoto={this.state.currentPhoto} />
         <PhotoList />
       </div>

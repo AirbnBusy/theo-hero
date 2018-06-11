@@ -1,7 +1,6 @@
 .button {
     cursor: pointer !important;
     display: inline-block !important;
-    position: relative !important;
     text-align: center !important;
     text-decoration: none !important;
     transition-property: background, border-color, color !important;
@@ -19,4 +18,6 @@
     background: #ffffff !important;
     border-color: transparent !important;
     color: #484848 !important;
+    padding: .5rem 1rem;
+    margin: 1.5rem 1.125rem 1.25rem 0;
 }
