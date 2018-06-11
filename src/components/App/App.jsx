@@ -3,12 +3,12 @@ import Backdrop from '../Backdrop/Backdrop';
 import ModalSS from '../ModalSS/ModalSS';
 import ModalGal from '../ModalGal/ModalGal';
 import Hero from '../Hero/Hero';
+import dummyData from '../../../dummyData';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      testImgSrc: 'https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00020.jpg',
       showModalGallery: false,
       showModalShareSave: false,
     };
@@ -43,6 +43,8 @@ class App extends Component {
   }
 
   render() {
+    // {console.log('dummyData', dummyData)}
+    // {console.log('heroImg', dummyData[0].uri)}
     return (
       <div>
         <Backdrop
@@ -54,9 +56,10 @@ class App extends Component {
         <ModalGal
           showModalGallery={this.state.showModalGallery}
           modalGalleryHandler={this.modalGalleryHandler}
+          photosInfo={dummyData}
         />
         <Hero
-          testImgSrc={this.state.testImgSrc}
+          heroImgURI={dummyData[0].uri}
           modalGalleryHandler={this.modalGalleryHandler}
           modalShareSaveHandler={this.modalShareSaveHandler}
         />

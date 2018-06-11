@@ -1,11 +1,12 @@
 import React from 'react';
 import PhotoListEntry from '../PhotoListEntry/PhotoListEntry';
+import styles from './PhotoList.css';
 
-const PhotoList = (props) => {
+const PhotoList = ({photosInfo}) => {
   return (
-    <div>
+    <div className={styles['photo-list-container']}>
       <div />
-      <PhotoListEntry />
+      {photosInfo.map(photoInfo => <PhotoListEntry uri={photoInfo.uri} key={photoInfo.uri} />)}
     </div>
   );
 };

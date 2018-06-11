@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 import styles from './Hero.css';
 
-const Hero = ({ testImgSrc, modalGalleryHandler, modalShareSaveHandler }) =>
+const Hero = ({ heroImgURI, modalGalleryHandler, modalShareSaveHandler }) =>
   (
     <div
       className={styles.container}
-      style={{ backgroundImage: `url(${testImgSrc})` }}
+      style={{ backgroundImage: `url(${heroImgURI})` }}
       onClick={modalGalleryHandler}
       role="presentation"
     >
@@ -22,7 +22,7 @@ const Hero = ({ testImgSrc, modalGalleryHandler, modalShareSaveHandler }) =>
   );
 
 Hero.propTypes = {
-  testImgSrc: PropTypes.string.isRequired,
+  heroImgURI: PropTypes.string.isRequired,
   modalGalleryHandler: PropTypes.func.isRequired,
   modalShareSaveHandler: PropTypes.func.isRequired,
 };

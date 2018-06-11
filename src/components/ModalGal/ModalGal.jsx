@@ -8,7 +8,8 @@ class ModalGal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPhoto: 'https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00020.jpg',
+      photosInfo: this.props.photosInfo,
+      currentPhoto: this.props.photosInfo[0].uri,
     };
   }
 
@@ -19,7 +20,7 @@ class ModalGal extends Component {
           <span className={styles['close-gallery']}>&times;</span>
         </div>
         <CurrentPhoto currentPhoto={this.state.currentPhoto} />
-        <PhotoList />
+        <PhotoList photosInfo={this.state.photosInfo} />
       </div>
     );
   }
