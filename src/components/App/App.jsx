@@ -7,17 +7,18 @@ import Hero from '../Hero/Hero';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      testImgSrc: 'https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00020.jpg',
+    };
   }
 
   render() {
     return (
       <div>
-        <h1> Hello, World! </h1>
         <Backdrop />
         <ModalSS />
         <ModalGal />
-        <Hero />
+        <Hero testImgSrc={this.state.testImgSrc} />
       </div>
     );
   }
