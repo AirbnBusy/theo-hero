@@ -2,7 +2,7 @@ import React from 'react';
 import PhotoListEntry from '../PhotoListEntry/PhotoListEntry';
 import styles from './PhotoList.css';
 
-const PhotoList = ({photosInfo}) => {
+const PhotoList = ({ photosInfo }) => {
   return (
     <div className={styles['photo-list-container']}>
       <div />
