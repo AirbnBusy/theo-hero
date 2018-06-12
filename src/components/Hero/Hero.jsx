@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
+import { share, heart } from '../SVG/SVG';
 import styles from './Hero.css';
 
 const Hero = ({ heroImgURI, modalGalleryHandler, modalShareSaveHandler }) =>
@@ -12,11 +13,11 @@ const Hero = ({ heroImgURI, modalGalleryHandler, modalShareSaveHandler }) =>
       role="presentation"
     >
       <div className={styles['upper-button-box']}>
-        <Button clicked={modalShareSaveHandler} />
-        <Button clicked={modalShareSaveHandler} />
+        <Button icon={share} label="Share" clicked={modalShareSaveHandler} />
+        <Button icon={heart} label="Save" clicked={modalShareSaveHandler} />
       </div>
       <div className={styles['lower-button-box']}>
-        <Button clicked={() => {}} />
+        <Button label="View Photos" clicked={() => {}} />
       </div>
     </div>
   );

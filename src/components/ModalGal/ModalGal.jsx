@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import CurrentPhoto from '../CurrentPhoto/CurrentPhoto';
 import PhotoList from '../PhotoList/PhotoList';
-import X from '../X/X';
-import Left from '../Left/Left';
-import Right from '../Right/Right';
+import { X, Left, Right } from '../SVG/SVG';
 import styles from './ModalGal.css';
 
 
@@ -20,7 +18,7 @@ class ModalGal extends Component {
   renderModal() {
     return (
       <div className={styles.container}>
-        <div className={[styles['close-control-bar'], styles.controls].join(' ')}>
+        <div className={styles['close-control-bar']}>
           <X />
         </div>
         <Left />

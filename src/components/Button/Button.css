@@ -1,23 +1,13 @@
 .button {
-    cursor: pointer !important;
-    display: inline-block !important;
-    text-align: center !important;
-    text-decoration: none !important;
-    transition-property: background, border-color, color !important;
-    transition-duration: 0.2s !important;
-    transition-timing-function: ease-out !important;
-    width: auto !important;
-    border-radius: 4px !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    font-weight: 600 !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-    min-width: 51.77708763999664px !important;
-    box-shadow: none !important;
-    background: #ffffff !important;
-    border-color: transparent !important;
-    color: #484848 !important;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    border-width: 1px;
+    background: #ffffff;
+    border-color: transparent;
+    color: #484848;
     padding: .5rem 1rem;
     margin: 1.5rem 1.125rem 1.25rem 0;
 }
