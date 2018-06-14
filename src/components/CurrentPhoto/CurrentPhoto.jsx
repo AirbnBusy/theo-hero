@@ -5,7 +5,7 @@ import styles from './CurrentPhoto.css';
 const CurrentPhoto = (props) => {
   return (
     <div className={styles['main-image-box']}>
-      <img style={{ maxWidth: '100%' }} src={`${props.currentPhoto}`} alt="room" />
+      <img style={{ maxWidth: '100%' }} src={props.currentPhoto} alt="room" />
     </div>
   );
 };

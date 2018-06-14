@@ -11,6 +11,8 @@ class App extends Component {
     this.state = {
       showModalGallery: false,
       showModalShareSave: false,
+      showShareBox: false,
+      showSaveBox: false,
     };
     this.modalGalleryHandler = this.modalGalleryHandler.bind(this);
     this.modalShareSaveHandler = this.modalShareSaveHandler.bind(this);
@@ -23,36 +25,41 @@ class App extends Component {
 
   modalShareSaveHandler(e) {
     e.stopPropagation();
+    const label = e.target.textContent;
     this.setState(prevState => ({ showModalShareSave: !prevState.showModalShareSave }));
+    (this.state.showShareBox || this.state.showSaveBox) ?
+    this.setState({ showShareBox: false, showSaveBox: false }) :
+    this.setState(prevState => ({ [`show${label}Box`]: !prevState[`show${label}Box`] }));
   }
 
-  // need to get this working
-  // might be tabIndex
-  // will probably set handler on modals
-  // onKeyDown={props.keyPressHandler}
-  // keyPressHandler={e => this.keyPressHandler(e)}
-
   keyPressHandler(e) {
-    console.log('key pressed');
-    if (e.keyCode === 27) {
+    console.log('event', e);
+    if (e.charCode === 27) {
       this.setState({
         showModalGallery: false,
         showModalShareSave: false,
+        showShareBox: false,
+        showSaveBox: false,
       });
     }
   }
 
   render() {
-    // {console.log('dummyData', dummyData)}
-    // {console.log('heroImg', dummyData[0].uri)}
     return (
       <div>
         <Backdrop
           showModalGallery={this.state.showModalGallery}
           showModalShareSave={this.state.showModalShareSave}
-          modalShareSaveHandler={e => this.modalShareSaveHandler(e)}
+          modalShareSaveHandler={this.modalShareSaveHandler}
+          keyPressHandler={this.keyPressHandler}
         />
-        <ModalSS />
+        <ModalSS
+          showModalShareSave={this.showModalShareSave}
+          showShareBox={this.state.showShareBox}
+          showSaveBox={this.state.showSaveBox}
+          heroImgURI={dummyData[0].uri}
+          modalShareSaveHandler={this.modalShareSaveHandler}
+        />
         <ModalGal
           showModalGallery={this.state.showModalGallery}
           modalGalleryHandler={this.modalGalleryHandler}

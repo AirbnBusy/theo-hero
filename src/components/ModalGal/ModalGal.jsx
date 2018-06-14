@@ -19,7 +19,7 @@ class ModalGal extends Component {
     return (
       <div className={styles.container}>
         <div className={styles['close-control-bar']}>
-          <X />
+          <X modalGalleryHandler={this.props.modalGalleryHandler} />
         </div>
         <Left />
         <Right />
@@ -30,7 +30,7 @@ class ModalGal extends Component {
   }
 
   render() {
-    {return this.props.showModalGallery ? this.renderModal() : null}
+    return this.props.showModalGallery ? this.renderModal() : null;
   }
 }
 

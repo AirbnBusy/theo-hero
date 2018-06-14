@@ -7,6 +7,8 @@ const Backdrop = (props) => {
     return (<div
       className={styles.show}
       onClick={props.modalShareSaveHandler}
+      onKeyDown={props.keyPressHandler}
+      tabIndex="0"
       role="presentation"
     />);
   } else if (props.showModalGallery) {

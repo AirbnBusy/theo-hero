@@ -352,8 +352,9 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
     font-size: 1.375rem;
+    color: #484848;
 }
 
 a {

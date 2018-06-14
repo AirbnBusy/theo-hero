@@ -8,18 +8,15 @@
 
 .x {
     fill: #FFF;
-    transform: scale(.014);
-    transform-origin: 14.8438rem .2187rem;
+    cursor: pointer;
 }
 
 .left {
     fill: #FFF;
-    transform: scale(.08);
-    transform-origin: 0.14rem 4.7rem;
+    cursor: pointer;
 }
 
 .right {
     fill: #FFF;
-    transform: scale(.08);
-    transform-origin: 29.25rem 4.7rem;
+    cursor: pointer;
 }
