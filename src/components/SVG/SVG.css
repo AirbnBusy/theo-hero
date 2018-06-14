@@ -1,0 +1,22 @@
+.share path {
+    fill: #a3a3a3;
+}
+
+.heart {
+    fill: #a3a3a3;
+}
+
+.x {
+    fill: #FFF;
+    cursor: pointer;
+}
+
+.left {
+    fill: #FFF;
+    cursor: pointer;
+}
+
+.right {
+    fill: #FFF;
+    cursor: pointer;
+}
