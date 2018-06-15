@@ -13,10 +13,24 @@
 
 .left {
     fill: #FFF;
-    cursor: pointer;
+    transform: scale(15);
 }
 
 .right {
     fill: #FFF;
+    transform: scale(15);
+}
+
+.left-box {
+    width: 125px;
+    top: 383px;
+    left: 6px;
+    cursor: pointer;
+}
+
+.right-box {
+    width: 125px;
+    top: 383px;
+    right: -35px;
     cursor: pointer;
 }

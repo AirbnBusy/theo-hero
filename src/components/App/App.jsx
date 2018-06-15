@@ -22,7 +22,6 @@ class App extends Component {
 
   componentDidMount() {
     const listingID = global.window.location.pathname.split('/')[3];
-    console.log(listingID);
     axios.get(`/api/listings/${listingID}/photos`)
       .then(photosInfo => this.setState({ photosInfo: photosInfo.data }))
       .catch(err => console.log('ERROR: ', err.message));

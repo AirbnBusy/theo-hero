@@ -10,9 +10,23 @@ class ModalGal extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photosInfo: this.props.photosInfo,
-      currentPhoto: this.props.photosInfo[0].uri,
+      i: 0,
     };
+    this.previousPic = this.previousPic.bind(this);
+    this.nextPic = this.nextPic.bind(this);
+  }
+
+  previousPic() {
+    console.log('click');
+    console.log('i', this.state.i);
+    console.log('that thing', this.props.photosInfo[this.state.i].uri);
+    this.state.i > 0 ?
+    this.setState(prevState => ({ i: --prevState.i })) : this.setState({ i: this.props.photosInfo.length -1 });
+  }
+
+  nextPic() {
+    this.state.i < this.props.photosInfo.length - 1 ?
+    this.setState(prevState => ({ i: ++prevState.i })) : this.setState({ i: 0 });
   }
 
   renderModal() {
@@ -21,10 +35,10 @@ class ModalGal extends Component {
         <div className={styles['close-control-bar']}>
           <X modalGalleryHandler={this.props.modalGalleryHandler} />
         </div>
-        <Left />
-        <Right />
-        <CurrentPhoto currentPhoto={this.state.currentPhoto} />
-        <PhotoList photosInfo={this.state.photosInfo} />
+        <Left previousPic={this.previousPic} />
+        <Right nextPic={this.nextPic} />
+        <CurrentPhoto currentPhoto={this.props.photosInfo[this.state.i].uri} />
+        <PhotoList photosInfo={this.props.photosInfo} />
       </div>
     );
   }
