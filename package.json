@@ -9,7 +9,8 @@
   },
   "scripts": {
     "server": "nodemon ./server/server.js",
-    "wp": "webpack-dev-server --mode development",
+    "wpds": "webpack-dev-server --mode development",
+    "wpw": "webpack -d --watch",
     "test": "jest --watch",
     "build": "webpack --mode development"
   },

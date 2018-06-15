@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import Backdrop from '../Backdrop/Backdrop';
 import ModalSS from '../ModalSS/ModalSS';
 import ModalGal from '../ModalGal/ModalGal';
 import Hero from '../Hero/Hero';
-import axios from 'axios';
-import dummyData from '../../../dummyData';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      photosInfo: dummyData,
+      photosInfo: null,
       showModalGallery: false,
       showModalShareSave: false,
       showShareBox: false,
@@ -55,33 +54,36 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <Backdrop
-          showModalGallery={this.state.showModalGallery}
-          showModalShareSave={this.state.showModalShareSave}
-          modalShareSaveHandler={this.modalShareSaveHandler}
-          keyPressHandler={this.keyPressHandler}
-        />
-        <ModalSS
-          showModalShareSave={this.showModalShareSave}
-          showShareBox={this.state.showShareBox}
-          showSaveBox={this.state.showSaveBox}
-          heroImgURI={this.state.photosInfo[0].uri}
-          modalShareSaveHandler={this.modalShareSaveHandler}
-        />
-        <ModalGal
-          showModalGallery={this.state.showModalGallery}
-          modalGalleryHandler={this.modalGalleryHandler}
-          photosInfo={this.state.photosInfo}
-        />
-        <Hero
-          heroImgURI={this.state.photosInfo[0].uri}
-          modalGalleryHandler={this.modalGalleryHandler}
-          modalShareSaveHandler={this.modalShareSaveHandler}
-        />
-      </div>
-    );
+    if (this.state.photosInfo) {
+      return (
+        <div>
+          <Backdrop
+            showModalGallery={this.state.showModalGallery}
+            showModalShareSave={this.state.showModalShareSave}
+            modalShareSaveHandler={this.modalShareSaveHandler}
+            keyPressHandler={this.keyPressHandler}
+          />
+          <ModalSS
+            showModalShareSave={this.state.showModalShareSave}
+            showShareBox={this.state.showShareBox}
+            showSaveBox={this.state.showSaveBox}
+            heroImgURI={this.state.photosInfo[0].uri}
+            modalShareSaveHandler={this.modalShareSaveHandler}
+          />
+          <ModalGal
+            showModalGallery={this.state.showModalGallery}
+            modalGalleryHandler={this.modalGalleryHandler}
+            photosInfo={this.state.photosInfo}
+          />
+          <Hero
+            heroImgURI={this.state.photosInfo[0].uri}
+            modalGalleryHandler={this.modalGalleryHandler}
+            modalShareSaveHandler={this.modalShareSaveHandler}
+          />
+        </div>
+      );
+    }
+    return null;
   }
 }
 
