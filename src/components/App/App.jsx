@@ -3,12 +3,14 @@ import Backdrop from '../Backdrop/Backdrop';
 import ModalSS from '../ModalSS/ModalSS';
 import ModalGal from '../ModalGal/ModalGal';
 import Hero from '../Hero/Hero';
+import axios from 'axios';
 import dummyData from '../../../dummyData';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      photosInfo: dummyData,
       showModalGallery: false,
       showModalShareSave: false,
       showShareBox: false,
@@ -17,6 +19,14 @@ class App extends Component {
     this.modalGalleryHandler = this.modalGalleryHandler.bind(this);
     this.modalShareSaveHandler = this.modalShareSaveHandler.bind(this);
     this.keyPressHandler = this.keyPressHandler.bind(this);
+  }
+
+  componentDidMount() {
+    const listingID = global.window.location.pathname.split('/')[3];
+    console.log(listingID);
+    axios.get(`/api/listings/${listingID}/photos`)
+      .then(photosInfo => this.setState({ photosInfo: photosInfo.data }))
+      .catch(err => console.log('ERROR: ', err.message));
   }
 
   modalGalleryHandler() {
@@ -57,16 +67,16 @@ class App extends Component {
           showModalShareSave={this.showModalShareSave}
           showShareBox={this.state.showShareBox}
           showSaveBox={this.state.showSaveBox}
-          heroImgURI={dummyData[0].uri}
+          heroImgURI={this.state.photosInfo[0].uri}
           modalShareSaveHandler={this.modalShareSaveHandler}
         />
         <ModalGal
           showModalGallery={this.state.showModalGallery}
           modalGalleryHandler={this.modalGalleryHandler}
-          photosInfo={dummyData}
+          photosInfo={this.state.photosInfo}
         />
         <Hero
-          heroImgURI={dummyData[0].uri}
+          heroImgURI={this.state.photosInfo[0].uri}
           modalGalleryHandler={this.modalGalleryHandler}
           modalShareSaveHandler={this.modalShareSaveHandler}
         />

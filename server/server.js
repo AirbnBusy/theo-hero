@@ -4,7 +4,8 @@ const app = express();
 const path = require('path');
 const { selectImageURIsByListingID } = require('../database/db-func');
 
-app.use(express.static(path.resolve(__dirname, '../public/')));
+app.use('/api/listings/:id', express.static(path.resolve(__dirname, '../public/')));
+app.use('/api/listings/:id', express.static(path.resolve(__dirname, '../dist/')));
 
 app.get('/api/listings/:listingID/photos', (req, res) => {
   const { listingID } = req.params;
