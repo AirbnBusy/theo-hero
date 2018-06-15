@@ -29,7 +29,7 @@ module.exports = {
   resolve: { extensions: ['*', '.js', '.jsx'] },
   output: {
     publicPath: bundlePath,
-    filename: 'bundle.js',
+    filename: 'hero-bundle.js',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'),

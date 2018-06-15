@@ -5,5 +5,5 @@ import './index.css';
 
 ReactDOM.render(
   <App />,
-  global.document.getElementById('root'),
+  global.document.getElementById('hero'),
 );
