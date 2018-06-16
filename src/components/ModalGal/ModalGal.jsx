@@ -17,9 +17,6 @@ class ModalGal extends Component {
   }
 
   previousPic() {
-    console.log('click');
-    console.log('i', this.state.i);
-    console.log('that thing', this.props.photosInfo[this.state.i].uri);
     this.state.i > 0 ?
     this.setState(prevState => ({ i: --prevState.i })) : this.setState({ i: this.props.photosInfo.length -1 });
   }

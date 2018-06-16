@@ -1,3 +1,5 @@
+USE hero_module;
+
 INSERT INTO `photos` (`uri`,`listing_id`,`description`) VALUES ('https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00001.jpg', 1001, NULL);
 INSERT INTO `photos` (`uri`,`listing_id`,`description`) VALUES ('https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00002.jpg', 1001, NULL);
 INSERT INTO `photos` (`uri`,`listing_id`,`description`) VALUES ('https://s3-us-west-1.amazonaws.com/airbnbusy/photos/p00003.jpg', 1001, NULL);
