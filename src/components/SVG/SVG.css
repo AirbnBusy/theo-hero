@@ -32,6 +32,14 @@
     cursor: pointer;
 }
 
+.heart-box {
+    transform: translateX(100px);
+}
+
+.share-box {
+    transform: translateX(220px);
+}
+
 .left-box {
     width: 125px;
     top: 383px;
