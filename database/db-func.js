@@ -4,7 +4,6 @@ const bluebird = require('bluebird');
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'loot',
   database: 'hero_module',
 });
 

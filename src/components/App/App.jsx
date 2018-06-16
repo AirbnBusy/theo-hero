@@ -22,7 +22,7 @@ class App extends Component {
 
   componentDidMount() {
     axios.defaults.baseURL = 'http://localhost:3003';
-    const listingID = global.window.location.pathname.match(/rooms|listings\/(\d{4,4})/)[1];
+    const listingID = global.window.location.pathname.match(/(rooms|listings)\/(\d{4,4})/)[2];
     axios.get(`/api/listings/${listingID}/photos`)
       .then(photosInfo => this.setState({ photosInfo: photosInfo.data }))
       .catch(err => console.log('ERROR: ', err.message));

@@ -6,6 +6,8 @@ const { selectImageURIsByListingID } = require('../database/db-func');
 const app = express();
 
 app.use(cors());
+// app.use(express.static(path.resolve(__dirname, '../public/')));
+// app.use(express.static(path.resolve(__dirname, '../dist/')));
 app.use('/api/listings/:id', express.static(path.resolve(__dirname, '../public/')));
 app.use('/api/listings/:id', express.static(path.resolve(__dirname, '../dist/')));
 
